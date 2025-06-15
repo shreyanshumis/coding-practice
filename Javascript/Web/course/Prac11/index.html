@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            background-color: black;
+        }
+
+        .box1{
+            color: bisque;
+            padding: 10px;
+            margin: 30px;
+            border: 2px solid rgb(255, 46, 81);
+            height: 200px; /*content only*/
+            box-sizing: border-box; /*element height = element+border+padding*/
+        }
+
+        .box2{
+            color: pink;
+            padding: 10px;
+            margin: 30px;
+            border: 2px solid rgb(255, 46, 81);
+            height: 200px; /*content only*/
+            box-sizing: border-box; /*element height = element+border+padding*/
+        }
+
+        /*Margin collapse - largest margin length used only if 2 margin attributes are in use, like in box1 and box2, it doesnt get added up.*/
+
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>

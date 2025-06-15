@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .box{
+            border: 2px solid black; /*Pixels - absolute*/
+            /* width: 1024px; */
+            width: 100vw; /*Viewport width/height - relative*/
+            /* em - inherits from element*/
+            /* rem - inherits from root element, stays the same as root element unless em is something other of it's own.*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+</body>
+</html>

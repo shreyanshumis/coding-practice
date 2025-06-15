@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Forms</title>
+</head>
+<body>
+    <div class="White">
+    <h1 style="text-align:center;">Laptop(Free me nahi milne wala gadho)</h1>
+    </div>
+    <div class="Laptop">
+    <table border="2" align="center">
+        <thead>
+            <tr>
+                <th> Acer </th>
+                <th> Asus </th>
+                <th> Lenovo </th>
+                <th> Dell </th>
+                <th> Hp </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Best deal </td>
+                <td> Nice deal </td>
+                <td> Mediocre </td>
+                <td> Good </td>
+                <td> Pricey </td>
+            </tr>
+            <tr>
+                <td> Performs good </td>
+                <td> No data </td>
+                <td> Not great </td>
+                <td> Decent </td>
+                <td> Great </td>
+            </tr>
+        </tbody>
+    </table> <br>
+</div>
+<div class="info">
+    <h4> Registration form -</h4>
+    <form action="backend.py">
+        <div class="name"> <label for="name"> Name:</label> <input type="text" id="name"> </div> <br>
+        <div class="roll"> Roll No: <input type="text"> </div> <br>
+        <div class="email"> Email: <input type="email" name="MyEmail" > </div> <br>
+        <div class="dob"> Your Date of Birth: <input type="date" name="" id="MyDate"> </div> <br>
+        <div class="bonus"> Bonus: <input type="number" name="MyBonus"> </div> <br>
+        <div> Are you eligible? <input type="checkbox" name="Myeligibility"> </div> <br>
+        <div> Gender:   Male <input type="radio" name="myGender"> 
+                        Female <input type="radio" name="myGender">
+                        Others <input type="radio" name="myGender"></div> <br>
+        <div class="intro"> Brief Intro about yourself: <br><Textarea name="MyText" id="" cols="50" rows="10"> </Textarea> </div> <br>
+        <div class="opt">
+            <label for="pc"> Laptops </label>
+            <select name="myPC" id="pc">
+                <option value="ac">Acer</option>
+                <option value="as">Asus</option>
+                <option value="ln">Lenovo</option>
+                <option value="dl">Dell</option>
+                <option value="mi">Hp</option>
+            </select>
+        </div>
+        <div class="submitbutton"> <input type="submit" value="Submit Now"></div> <br>
+    </form>
+    <p> Incase the above form doesn't work, then click the link below :-</p>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"> Link to another form</a>
+
+    <h4>What else can you do?</h4>
+    <ol type="1"> 
+        <li> Check if that works. </li>
+        <li> Inform me about it.</li>
+    </ol>
+</div>
+</body>
+</html>

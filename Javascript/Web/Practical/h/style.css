@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.White{
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+.Laptop{
+    background-color: rgb(176, 176, 176);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+}
+
+.Laptop table{
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+.info{
+    background-color: rgb(127, 191, 255);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.name input{
+    border-radius: 10px;
+}
+.roll input{
+    border-radius: 10px;
+}
+.email input{
+    border-radius: 10px;
+}
+.dob input{
+    border-radius: 10px;
+}
+.bonus input{
+    border-radius: 10px;
+}
+.intro textarea{
+    border-radius: 10px;
+    width: max-content;
+}
+.opt{
+    size: 100px;
+}
+.opt select{
+    border-radius: 10px;
+}
+.submitbutton{
+    margin-top: 10px;
+}
+.submitbutton input {
+    padding: 9px 14px;
+border-radius: 10px;
+color: white;
+background-color: dodgerblue;
+font-weight: bold;
+font-size: 21px;
+margin: 0 3px;
+cursor: pointer;
+}

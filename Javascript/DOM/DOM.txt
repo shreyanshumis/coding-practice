@@ -1,0 +1,86 @@
+DOM - console in web browser
+
+
+console.log(window)
+
+//document
+
+console.log(window.document)
+you can also write just (document)
+
+to get the other JQuery etc. 
+console.dir(document)
+
+-----------------------------------
+On our html file
+
+document.getElementById('title)
+
+document.getElementById('title).id 
+
+document.getElementById('title).class //doesnt work
+document.getElementById('title).className //works(we write class but it's actually classname.)
+
+document.getElementById('title).getAttribute('id')
+
+document.getElementById('title).setAttribute('class', 'test')
+//if u use setAttribute, it will replace the current attribute too so add the current attribute to it(space bar) if you want to retain it.
+
+--------
+styling:-
+
+const title = document.getElementById('title')
+
+title.style.backgroundColour = 'blue'
+
+----------------------
+title.textContent - It shows all content, even shows hidden text
+title.innerHTML - It even shows the html code in the text
+title.innerText - It shows visible text
+
+-----------------------
+querySelector vs querySelectorAll 
+1st select the first item(and returns an array) but 2nd selects all(and returns a nodelist).
+
+document.querySelector('h2')
+document.querySelector('#title') //you get the id
+document.querySelector('.heading')
+//u can use css selectors here.
+
+document.queryselector('input[type="password"]')
+--------------------------
+Colour changing using querySelector
+
+document.querySelector('ul') //selects entire unordered list in one.html
+const myul = document.querySelector('ul')
+myul.querySelector('li')
+
+const turnGreen = myul.querySelector('li')
+turnGreen.style.backgroundColour = "green"
+
+------------------------
+document.querySelectorAll('li')
+//you get a node list
+//node list and htmlcollection are NOT pure array.
+
+const tempLiList = document.querySelectorAll('li')
+//tempLiList is a node list here.
+tempLiList.style.color = 'green' //won't work cuz nodelist works a bit differently than arrays do
+tempLiList[0].style.color = 'green' //works 
+
+tempLiList.forEach(function (l) {
+    l.style.backgroundColour = 'green'
+})
+
+----------------------------
+document.getElementByClassName('list-item')
+//you get htmlcollection [] now
+
+const tempClassList = document.getElementByClassName('list-item')
+
+Convert it to array -
+const myConvertedArray = Array.from(tempClassList)
+
+myConvertedArray.forEach(function (li) {
+    li.style.color = 'red'
+})

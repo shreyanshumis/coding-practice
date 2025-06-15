@@ -1,0 +1,10 @@
+
+/* . to represent class */
+.red{
+    color: red;
+} 
+
+/* # to represent ID */
+#firstdiv{
+    background-color: pink;
+}

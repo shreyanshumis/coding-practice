@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Final</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //Add
+    function addLanguage(langName){
+        const li = document.createElement('li')//create a list item 
+        
+        //time to attach it to the language unordered list
+        
+        //it's UNOPTIMIZED - it traverses the entire tree
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+        }
+        addLanguage("Python")
+        addLanguage("Typescript")
+
+        //OPTIMIZED - creates a new node
+        function addOptiLanguage(langName){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptiLanguage('golang')
+
+    //Edit element (second element)
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    //Edit element 2 (first element)
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+    //Remove (removing last element)
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>

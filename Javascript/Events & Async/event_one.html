@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    //use eventlisteners instead of onclick since they give the ability of propagation.
+
+    //onclick
+//    document.getElementById('owl').onclick = function(){
+//     alert("owl clicked")
+//    }
+
+    //event listeners
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert("owl clicked")
+    // }, false) //the third parameter is false by default
+    
+    
+    // document.getElementById('owl').addEventListener('click', function(e){}, false)
+    //e is event object
+
+
+    //types(like keyboard, mouse), timestamp(time, date), defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+    
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    // }, false)
+
+    //the third parameter
+    //it's known as event propagation(event bubbling and event capturing)
+
+    //if we have false(default)
+    //if we click on owl, both images and owl are triggered, owl prints first and the images/ul prints 2nd. it is called event propagation(bubbling up- it goes from bottom to up/goes from inside to outside)
+
+    //if we have true
+    //then the opposite will happen, it will go from outside to inside, first the images/ul statement will print and then the owl.
+
+    //method -> e.stopPropagation()
+    //It stops bubbling of events
+
+    //method -> prevent default
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log("google clicked");
+    //     e.preventDefault()
+    // }, false)
+
+
+//better approach
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target);
+        // console.log(e.target.parentNode);
+        // console.log(e.target.tagName);
+        
+        //so that the entire UList doesnt disappear when u click on a list item instead of the image()
+        if (e.target.tagName === 'IMG')
+        {
+        //to remove the entire parent node
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+
+        //removeIt.parentNode.removeChild(removeIt) //another way
+        }
+    }, false)
+
+</script>
+</html>

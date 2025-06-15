@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+            /* box-shadow: h-offset v-offset blur spread colour inset; */
+            /* h/v-offset - horizontal vertical offset
+            blur- larger = more blurrier shadows
+            spread - expands or shrinks shadows 
+            color - color
+            inset- makes the shadow inner*/
+
+            box-shadow: 5px 5px 15px 5px #888888;
+
+        }
+
+        .text-element{
+            text-shadow: 2px 2px 2px #ff98f8;
+            /* outline: 2px solid black; Outline doesnt take up space and is not equal to border...*/
+            outline: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">I am a box</div>
+    <div class="text-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni ex quibusdam fugiat odio facilis atque quod, nostrum, rerum asperiores saepe nobis esse, nam iste officiis! Unde excepturi quia provident voluptatibus praesentium! Assumenda, est!</div>
+</body>
+</html>

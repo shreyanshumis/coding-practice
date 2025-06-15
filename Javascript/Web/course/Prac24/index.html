@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise:4 </title>
+    <style>
+        :root{
+            --color:rgb(21, 11, 53);
+            --seccolor:rgb(27, 22, 31);
+            --another-color:rgb(45, 42, 120);
+            --decoration-color: rgb(255, 45, 210) ;
+            --main-color:rgb(222, 26, 163);
+            --defpad:15px;
+            --defop:0.5;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: var(--seccolor)
+        }
+       
+        
+     .navbar{
+      background-color: var(--color);
+      }
+      .navbar li{
+        color:var(--main-color) ;
+        text-align: center;
+      }
+      .navbar li:hover{
+        background-color: var(--another-color);
+        cursor: pointer;
+      }
+     
+      ul{
+        display: flex;
+      }
+      ul li{
+        opacity: var(--defop);
+      list-style: none;
+      font-size: 25px;
+      margin: 10px;
+       padding: var(--defpad) 
+      
+      }
+      h1{
+        text-align: center;
+        color: var(--decoration-color);
+      }
+      .container{
+        margin: 23px;
+        padding: var(--defpad);
+        font-size: 20px;
+        border: 5px solid var(--main-color);
+        height: 150px;
+        width: 550px;
+        background-color: var(--another-color);
+        border-radius: 25px;
+        color: aliceblue;
+      }
+     
+        
+      
+      
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+             <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+      <h1> Dont remember asking</h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aspernatur doloremque officiis tenetur ab labore, accusamus cupiditate explicabo esse inventore error iusto quasi ullam animi, eveniet, natus saepe. Unde aliquam eveniet vitae facere alias.</p>
+    </div>
+    
+
+</body>
+</html>

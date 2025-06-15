@@ -1,0 +1,11 @@
+from turtle import *
+color('red')
+begin_fill()
+pensize(5)
+setposition(0,0)
+pen(pencolor="yellow", fillcolor="black", pensize=10, speed=20)
+begin_fill()
+circle(90)
+end_fill()
+end_fill()
+done()
