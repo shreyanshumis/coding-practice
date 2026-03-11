@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*Element selectors*/
+
+        div{
+            background-color: white;
+        }
+
+        /* Class selector*/
+
+        .orange{ 
+            background-color: orange;
+        }
+        /*Id selector*/
+
+        #green{
+            background-color: green;
+        }
+
+        /*Child selector*/
+        /*Only applies to direct child*/
+        div > p {
+            color: aqua;
+            background-color: black;
+        }
+
+        /* Descendant Selector */
+
+        div p{ /*Applies to all children*/
+            color: aliceblue;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 10;
+            padding: 10;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color: violet;
+        }
+        a:link{
+            color: burlywood;
+        }
+        a:active{
+            background-color: blueviolet;
+        }
+        a:hover{
+            background-color: blue;
+        }
+
+        p:first-child{ /*Applies on First child of parent*/
+            background-color: rgb(14, 222, 222);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="orange">
+        I am a div
+        <p> I am a para inside div</p>
+    </div>
+
+    <div>
+        I am another div
+    </div>
+
+    <div id="green">
+        I am one more div
+    </div>
+
+    <a href="https://www.google.com">Google.</a>
+
+    <main class="one">
+        First child pseudo selector:
+        <p>First child</p>
+        <p>Second child</p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+import cv2
+
+image = cv2.imread('img.jpg', cv2.IMREAD_GRAYSCALE)
+
+bright_image = cv2.add(image, 50)  # Increase brightness
+dark_image = cv2.subtract(image, 50)  # Decrease brightness
+
+cv2.imshow('Original Image', image)
+cv2.imshow('Brightened Image', bright_image)
+cv2.imshow('Darkened Image', dark_image)
+cv2.imwrite('brightened_image.jpg', bright_image)
+cv2.imwrite('darkened_image.jpg', dark_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

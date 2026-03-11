@@ -1,0 +1,5 @@
+myfile = open(r'C:\\Users\\mryts\\OneDrive\\Desktop\\petra.txt',"r")
+s=myfile.readlines()
+linecount = len(s)
+print("Number of lines in the file is...\n",linecount )
+myfile.close()

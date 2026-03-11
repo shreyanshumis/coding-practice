@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display properties</title>
+
+    <!-- ! IMP ! link - https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+
+    <style>
+        .box{
+            border: 2px solid black;
+
+            /* display: inline; */
+            /* padding: 69px; - padding top doesnt apply on inline elements, same for margin etc. */
+
+            display: inline-block;
+            padding: 20px;
+        }
+        
+        .box1{
+            /* display: none; - removes space and the element too */
+
+            /* visibility: hidden; removes element but keeps the space */
+
+            /* display: flex; OR
+            display: inline-flex; OR
+            display: grid;
+
+            justify-content: center; both used to centre the content within the box*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am a box
+    </div>
+
+    <div class="box">
+        I am another box
+    </div>
+
+    <span>I am a good</span>
+    <span>boy</span>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build & run",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "&&",
+                "./a.out",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true,
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+            },
+            "problemMatcher": "$gcc",
+}
+]
+}
